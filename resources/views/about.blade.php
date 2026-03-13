@@ -9,10 +9,10 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100 text-lg leading-relaxed">
-                    <p>Nama : Lyvia Ayuning Larasati</p>
+                    <p>Nama : Lyvia A. Larasati</p>
                     <p>NIM : 20231040182</p>
                     <p>Program Studi : Teknologi Informasi</p>
-                    <p>Hobi : Menonton Film</p>
+                    <p>Hobi : Menonton Film, Mendengarkan lagu, Bermain game</p>
                 </div>
             </div>
         </div>
