@@ -2,11 +2,11 @@
 
 | Register | Login |
 |----------|-------|
-| ![](ss/praktikum2/register.png) | ![](ss/praktikum2/login.png) |
+| ![](ss/pertemuan2/register.png) | ![](ss/pertemuan2/login.png) |
 
 | Dashboard | About |
 |-----------|-------|
-| ![](ss/praktikum2/dashboard.png) | ![](ss/praktikum2/about.png) |
+| ![](ss/pertemuan2/dashboard.png) | ![](ss/pertemuan2/about.png) |
 
 ## Pertemuan 3
 
