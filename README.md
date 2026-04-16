@@ -27,3 +27,13 @@
 | Edit Product | Product Detail | Product Table |
 |--------------|---------------|----------|
 | ![](ss/pertemuan4/editProduct.png) | ![](ss/pertemuan4/productDetail.png) | ![](ss/pertemuan4/db_productTable.png) |
+
+## Pertemuan 5
+
+| Gate & Policy - Login Admin (Akses Penuh) | Gate & Policy - Login User (Akses Terbatas) |
+|-------------------------------------------|---------------------------------------------|
+| ![](ss/pertemuan5/admin_view.png)         | ![](ss/pertemuan5/user_view.png)            |
+
+| Klik Export sbg Admin (Pesan Berhasil) | Akses Paksa URL sbg User (Error 403) |
+|----------------------------------------|--------------------------------------|
+| ![](ss/pertemuan5/admin_export.png)    | ![](ss/pertemuan5/user_403.png)      |
