@@ -37,3 +37,9 @@
 | Klik Export sbg Admin (Pesan Berhasil) | Akses Paksa URL sbg User (Error 403) |
 |----------------------------------------|--------------------------------------|
 | ![](ss/pertemuan5/admin_export.png)    | ![](ss/pertemuan5/user_403.png)      |
+
+## Pertemuan 6
+
+| Validasi Store | Validasi Update |
+|----------------|-----------------|
+| ![](ss/pertemuan6/validasi_store.png) | ![](ss/pertemuan6/validasi_update.png) |
