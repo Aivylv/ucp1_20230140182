@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('kategoris', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
-            $table->string('name');
+            //$table->foreignId('product_id')... dihapus karena relasi terbalik
+            $table->string('name')->unique(); //Menambahkan unique() agar nama kategori tidak boleh sama persis
+            $table->timestamps(); //Menambahkan timestamps()
         });
     }
 

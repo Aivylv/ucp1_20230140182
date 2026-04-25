@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StoreProductRequest;
@@ -13,7 +14,9 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        //Ubah Product::all() menjadi Product::with('kategori')->get()
+        //Ini berfungsi agar Laravel otomatis mengambil data nama kategori yang berelasi
+        $products = Product::with('kategori')->get();
 
         return view('product.index', compact('products'));
     }
@@ -31,8 +34,9 @@ class ProductController extends Controller
     public function create()
     {
         $users = User::orderBy('name')->get();
+        $kategoris = Kategori::all(); // (Ambil data kategori untuk dijadikan pilihan dropdown)
 
-        return view('product.create', compact('users'));
+        return view('product.create', compact('users', 'kategoris')); // (Kirim variabel kategoris ke view)
     }
 
     public function show($id)
@@ -62,8 +66,11 @@ class ProductController extends Controller
         Gate::authorize('update', $product);
 
         $users = User::orderBy('name')->get();
+        //Ambil data kategori untuk form edit
+        $kategoris = \App\Models\Kategori::all(); 
 
-        return view('product.edit', compact('product', 'users'));
+        //Kirim variabel kategoris ke view
+        return view('product.edit', compact('product', 'users', 'kategoris'));
     }
 
     public function delete($id)

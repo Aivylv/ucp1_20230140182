@@ -23,6 +23,13 @@
                     <x-nav-link :href="route('product.index')" :active="request()->routeIs('product.*')">
                         {{ __('Product') }}
                     </x-nav-link>
+
+                    {{-- Menambahkan menu Category di navbar desktop. Menu ini dibungkus @can agar hanya muncul jika user memiliki role admin sesuai Gate 'manage-category') --}}
+                    @can('manage-category')
+                        <x-nav-link :href="route('kategori.index')" :active="request()->routeIs('kategori.*')">
+                            {{ __('Category') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 

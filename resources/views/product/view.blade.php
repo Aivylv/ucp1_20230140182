@@ -20,16 +20,33 @@
 
                         {{-- Action Buttons --}}
                         <div class="flex items-center gap-2">
-                            <x-edit-button :url="route('product.edit', $product)" />
-                            <x-delete-button :action="route('product.delete', $product->id)" />
+                            @can('update', $product)
+                                <x-edit-button :url="route('product.edit', $product)" />
+                            @endcan
+                            
+                            @can('delete', $product)
+                                <x-delete-button :url="route('product.delete', $product->id)" />
+                            @endcan
                         </div>
+                    </div>
 
                     {{-- Detail Card --}}
                     <div class="rounded-lg border border-gray-200 dark:border-gray-700 divide-y divide-gray-100 dark:divide-gray-700">
+                        
                         {{-- Name --}}
                         <div class="flex items-center px-5 py-4">
                             <div class="w-32 shrink-0 text-sm text-gray-500 dark:text-gray-400">Product Name</div>
                             <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">{{ $product->name }}</div>
+                        </div>
+
+                        {{-- Category (BARU DITAMBAHKAN) --}}
+                        <div class="flex items-center px-5 py-4">
+                            <div class="w-32 shrink-0 text-sm text-gray-500 dark:text-gray-400">Category</div>
+                            <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+                                    {{ $product->kategori->name ?? 'No Category' }}
+                                </span>
+                            </div>
                         </div>
 
                         {{-- Quantity --}}

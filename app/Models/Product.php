@@ -10,6 +10,7 @@ class Product extends Model
 
     protected $fillable = [
         'user_id',
+        'kategori_id', //Menambahkan 'kategori_id' agar field ini diizinkan untuk diisi data saat form disubmit
         'name',
         'quantity',
         'price'
@@ -20,8 +21,8 @@ class Product extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function kategoris()
+    public function kategori() //Mengubah nama fungsi menjadi tunggal "kategori" karena 1 produk hanya milik 1 kategori
     {
-        return $this->hasMany(Kategori::class);
+        return $this->belongsTo(Kategori::class); //Mendefinisikan balikan relasi belongsTo ke model Kategori
     }
 }

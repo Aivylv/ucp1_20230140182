@@ -23,6 +23,7 @@ class StoreProductRequest extends FormRequest
         // Pindahkan rules dari Controller ke sini
         return [
             'name' => 'required|string|max:255',
+            'kategori_id' => 'required|exists:kategoris,id', //Tambahkan baris ini agar data dari dropdown diizinkan lewat dan tervalidasi
             'quantity' => 'required|integer|min:0',
             'price' => 'required|numeric|min:0',
             'user_id' => 'required|exists:users,id',

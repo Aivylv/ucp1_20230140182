@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('kategori_id')->nullable()->constrained('kategoris')->onDelete('cascade'); //Menambahkan foreign key kategori_id
             $table->string('name');
             $table->integer('quantity');
             $table->decimal('price', 10, 2);

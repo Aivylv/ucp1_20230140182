@@ -1,4 +1,4 @@
-<form action="{{ $action }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?')">
+<form action="{{ $url }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?')">
     @csrf
     @method('DELETE')
     <button type="submit" class="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border border-red-300 dark:border-red-600 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 transition">

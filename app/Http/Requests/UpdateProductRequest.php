@@ -15,6 +15,7 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'name' => 'sometimes|required|string|max:255',
+            'kategori_id' => 'required|exists:kategoris,id', //Tambahkan baris ini agar data dari dropdown diizinkan lewat dan tervalidasi
             'quantity' => 'sometimes|required|integer|min:0',
             'price' => 'sometimes|required|numeric|min:0',
             'user_id' => 'sometimes|required|exists:users,id',
